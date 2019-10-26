@@ -3,7 +3,7 @@
     /// <summary>
     /// Exception related to a property not found
     /// </summary>
-    public class PropertyNotFoundException : System.Exception
+    public class PropertyNotFoundException
     {
         /// <summary>
         /// Property name not found

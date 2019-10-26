@@ -3,7 +3,7 @@
     /// <summary>
     /// When an error occurs in the CSV formatting
     /// </summary>
-    public abstract class IncorrectCSVValueFormatting : System.Exception
+    public abstract class IncorrectCSVValueFormatting 
     {
         // Improper value
         private readonly string _value;

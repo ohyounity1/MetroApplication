@@ -68,6 +68,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Patterns\Framework.Patterns\Framework.Patterns.csproj">
+      <Project>{E154CEA8-B121-4E39-9D9D-43C0C1950119}</Project>
+      <Name>Framework.Patterns</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Utility\Framework.Utility\Framework.Utility.csproj">
       <Project>{c5ced591-6901-40d4-b3dd-87e2bf7b5900}</Project>
       <Name>Framework.Utility</Name>

@@ -3,6 +3,9 @@
 using Newtonsoft.Json.Linq;
 
 using Framework.Data.Exception;
+using Framework.Patterns.Exception;
+
+using OurException = Framework.Patterns.Exception.Exception;
 
 namespace Framework.Data.Serialize.JSON
 {
@@ -28,7 +31,7 @@ namespace Framework.Data.Serialize.JSON
                 return converter(token);
             }
             // Use exception
-            throw new PropertyNotFoundException(propertyName);
+            throw OurException.Throw(new PropertyNotFoundException(propertyName));
         }
 
         /// <summary>
@@ -50,7 +53,7 @@ namespace Framework.Data.Serialize.JSON
                 assigner(result);
             }
             // Use exception
-            throw new PropertyNotFoundException(propertyName);
+            throw OurException.Throw(new PropertyNotFoundException(propertyName));
         }
     }
 }
