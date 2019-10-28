@@ -3,7 +3,6 @@
 using Newtonsoft.Json.Linq;
 
 using Framework.Data.Exception;
-using Framework.Patterns.Exception;
 
 using OurException = Framework.Patterns.Exception.Exception;
 

@@ -15,8 +15,15 @@ namespace Framework.Data.Serialize
         bool Load(TextReader reader);
     }
 
+    /// <summary>
+    /// Addition to the <see cref="IInSerializer"/> that adds access to the Data payload
+    /// </summary>
+    /// <typeparam name="T">The type of the data to save out</typeparam>
     public interface IInSerializer<T> : IInSerializer
     {
+        /// <summary>
+        /// After loading the data, get the data from this location
+        /// </summary>
         public T Data { get; }
     }
 }

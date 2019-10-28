@@ -1,5 +1,4 @@
-﻿using System;
-using Framework.Data.Serialize;
+﻿using Framework.Data.Serialize;
 
 namespace Framework.Data.Storage
 {

@@ -25,12 +25,19 @@
         {
             return Details.ToString();
         }
-
-        public static Exception<T> Throw(T input) => new Exception<T>(input);
     }
 
+    /// <summary>
+    /// Helper class for throwing exception with the given detail class
+    /// </summary>
     public static class Exception
     {
+        /// <summary>
+        /// Helper method to throw exception with given payload detail class
+        /// </summary>
+        /// <typeparam name="T">Payload detail class to throw with the exception</typeparam>
+        /// <param name="input">Exception details</param>
+        /// <returns><see cref="Exception{T}'"/></returns>
         public static Exception<T> Throw<T>(T input) => new Exception<T>(input);
     }
 }

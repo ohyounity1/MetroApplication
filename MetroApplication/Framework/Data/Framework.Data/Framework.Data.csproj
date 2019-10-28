@@ -61,7 +61,7 @@
     <Compile Include="Serialize\JSON\JSONSerializer.cs" />
     <Compile Include="Storage\FileStorageMedium.cs" />
     <Compile Include="Storage\IStorageMedium.cs" />
-    <Compile Include="Storage\RequiredFIleMissingException.cs" />
+    <Compile Include="Storage\RequiredFileMissingException.cs" />
     <Compile Include="Storage\Storable.cs" />
   </ItemGroup>
   <ItemGroup>

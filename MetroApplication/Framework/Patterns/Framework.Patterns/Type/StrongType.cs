@@ -22,6 +22,6 @@
         /// Implicit conversion back to <see cref="T"/>
         /// </summary>
         /// <param name="source">Wrapper</param>
-        public static implicit operator T(StrongType<T> source) => source._wrapped;
+        public static explicit operator T(StrongType<T> source) => source._wrapped;
     }
 }

@@ -1,5 +1,8 @@
 ﻿using System.IO;
+
 using Framework.Data.Serialize;
+
+using OurException = Framework.Patterns.Exception.Exception;
 
 namespace Framework.Data.Storage
 {
@@ -13,12 +16,16 @@ namespace Framework.Data.Storage
         /// </summary>
         private readonly string _fileName;
 
+        /// <summary>
+        /// Whether the file must exist
+        /// </summary>
         private readonly bool _mustExist;
 
         /// <summary>
         /// Initializes a new instance of <see cref="FileStorageMedium"/>
         /// </summary>
         /// <param name="fileName">Name of the file being used for storage</param>
+        /// <param name="mustExist">Whether the file must exist, false by default</param>
         public FileStorageMedium(string fileName, bool mustExist = false)
         {
             _fileName = fileName;
@@ -45,7 +52,7 @@ namespace Framework.Data.Storage
         public void Load(IInSerializer serializer)
         {
             if (_mustExist && !File.Exists(_fileName))
-                throw new RequiredFIleMissingException(_fileName);
+                throw OurException.Throw(new RequiredFileMissingException(_fileName));
             else if (!_mustExist && !File.Exists(_fileName))
                 return;
 
