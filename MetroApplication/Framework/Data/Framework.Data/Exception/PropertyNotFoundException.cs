@@ -15,5 +15,11 @@
         /// </summary>
         /// <param name="propertyName">Property not found</param>
         public PropertyNotFoundException(string propertyName) => PropertyName = propertyName;
+
+        /// <summary>
+        /// <see cref="object.ToString()"/>
+        /// </summary>
+        /// <returns>Definition of the error</returns>
+        public override string ToString() => $"The following required property was not found: {PropertyName}";
     }
 }

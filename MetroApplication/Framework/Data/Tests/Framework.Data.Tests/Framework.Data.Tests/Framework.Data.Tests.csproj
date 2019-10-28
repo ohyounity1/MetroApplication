@@ -49,13 +49,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exception\IncorrectCSVBoolValueFormattingTests.cs" />
+    <Compile Include="Exception\IncorrectCSVEnumValueFormattingTests.cs" />
+    <Compile Include="Exception\PropertyNotFoundExceptionTests.cs" />
+    <Compile Include="Exception\UnrecognizedCSVHeaderPropertyTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Exception\" />
+    <ProjectReference Include="..\..\..\Framework.Data\Framework.Data.csproj">
+      <Project>{545d0203-9b8a-4768-9a7c-0c53b3a24e7f}</Project>
+      <Name>Framework.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
