@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace MetroApplication
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void LoadedEventHandler(object sender, RoutedEventArgs e)
+        {
+            using var connnection = new MySqlConnection();
         }
     }
 }
