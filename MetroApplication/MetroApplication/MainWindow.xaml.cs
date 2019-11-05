@@ -35,19 +35,19 @@ namespace MetroApplication
                 Console.WriteLine("Connecting to MySQL...");
                 conn.Open();
 
-                string sql1 = "USE gregs_list";
+                string sql1 = "USE MetroLines";
                 using MySqlCommand cmd1 = new MySqlCommand(sql1, conn);
 
                 var result = cmd1.ExecuteNonQuery();
 
                 // Perform database operations
-                string sql = "SELECT * FROM my_contacts";
+                string sql = "SELECT * FROM MetroLines";
                 using MySqlCommand cmd = new MySqlCommand(sql, conn);
                 MySqlDataReader rdr = cmd.ExecuteReader();
 
                 while (rdr.Read())
                 {
-                    Console.WriteLine(rdr[0] + " -- " + rdr[1]);
+                    Console.WriteLine($"{rdr[8]}: {rdr[0]} Line From {rdr[3]} to {rdr[2]} Opened in {rdr[9]}");
                 }
             }
             catch (Exception ex)
